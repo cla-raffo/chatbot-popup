@@ -34,12 +34,18 @@
 </head>
 <body>
     <div id="chatbot">
-       <iframe 
-  src="https://chat.int.bayer.com/iframe.html?assistant=1a56baaf-391b-4f20-a5aa-a448abdad98d&expanded=true&containerHeight=800px" 
-  width="100%" 
-  height="600px" 
-  frameborder="0">
-</iframe>
+        <script src="https://alcdn.msauth.net/browser/2.30.0/js/msal-browser.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>
+        <script>
+  window.mgaChatbotConfig = {
+    baseUrl: "https://[https://cla-raffo.github.io/chatbot-popup/]", // Your redirect URL - ask mGA team to get added to Azure AD
+    assistantId: "1a56baaf-391b-4f20-a5aa-a448abdad98d", // Your assistant ID you would like to use in chatbot
+    dynamicScript: true
+  };
+</script>
+<script src="https://chat.int.bayer.com/embed.min.js" defer></script>
+
     </div>
     <button id="openChat">Apri Chatbot</button>
     <script>
